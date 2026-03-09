@@ -6,67 +6,92 @@
     <title>Opti-build PC | Boutique Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 px-4 py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-black text-blue-600 uppercase tracking-tighter">Opti-build PC</h1>
-            <a href="#boutique" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold">Voir Stock</a>
+            <div class="flex items-center space-x-2 bg-blue-50 px-3 py-1 rounded-full">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span class="text-[10px] font-bold text-blue-800 uppercase">En stock</span>
+            </div>
         </div>
     </nav>
 
-    <header class="bg-slate-900 text-white py-16 px-4 text-center">
-        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">PC Gaming de Précision</h2>
-        <p class="text-slate-400 text-lg">Montage soigné, configurations optimisées, prêt à jouer.</p>
+    <header class="bg-slate-900 text-white py-12 px-4 text-center">
+        <h2 class="text-3xl font-extrabold mb-2 uppercase tracking-tight">PC Gaming de Précision</h2>
+        <p class="text-slate-400 text-sm">Montage White Edition & Performances 1080p</p>
     </header>
 
-    <main id="boutique" class="max-w-6xl mx-auto py-12 px-4">
+    <main class="max-w-6xl mx-auto py-8 px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col h-full hover:scale-[1.02] transition duration-300">
-                <div class="h-72 w-full overflow-hidden bg-slate-200 relative">
-                    <img src="https://i.ibb.co/jvZ69tT/IMG-20260307-182542.jpg" alt="PC Gamer Full White" class="w-full h-full object-cover">
-                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Full White & RGB</span>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col h-full transition duration-300">
+                
+                <div class="relative group">
+                    <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-72 bg-slate-200">
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/bRWGv3bP/IMG-20260307-182630.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/ycDHxnz0/IMG-20260307-182556.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/8DTJ7LSk/IMG-20260307-182552.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/N6g1xC5X/IMG-20260307-182609.jpg" class="w-full h-full object-cover"></div>
+                    </div>
+                    <div class="absolute bottom-3 right-3 bg-black/50 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-sm italic">
+                        Glissez pour voir les photos →
+                    </div>
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">White Edition</span>
                 </div>
                 
                 <div class="p-6 flex flex-col flex-grow">
-                    <h4 class="text-xl font-black text-slate-800 leading-tight">PC Gamer White - i5-9400 | RX 580</h4>
+                    <h4 class="text-xl font-black text-slate-800 leading-tight">PC Gamer - i5-9400 | RX 580</h4>
                     
                     <div class="mt-4 space-y-2 text-sm text-slate-600 flex-grow">
-                        <div class="flex items-center"><i class="fas fa-microchip w-5 text-blue-500"></i> i5-9400 (Turbo 4.10 GHz)</div>
-                        <div class="flex items-center"><i class="fas fa-video w-5 text-blue-500"></i> Radeon RX 580 (2048SP)</div>
-                        <div class="flex items-center"><i class="fas fa-memory w-5 text-blue-500"></i> 16 Go DDR4</div>
-                        <div class="flex items-center"><i class="fas fa-hdd w-5 text-blue-500"></i> 850 Go SSD (Triple Stockage)</div>
-                        <div class="mt-4 bg-blue-50 p-3 rounded-xl border border-blue-100">
-                            <p class="text-[11px] font-bold text-blue-800 uppercase mb-1">Options (Retrait place) :</p>
-                            <p class="text-xs text-blue-700">• Écran 22" FHD (+30€)<br>• Pack Périphériques neufs (+50€)</p>
+                        <div class="flex items-center font-medium"><i class="fas fa-microchip w-5 text-blue-500"></i> i5-9400 (Turbo 4.10 GHz)</div>
+                        <div class="flex items-center font-medium"><i class="fas fa-video w-5 text-blue-500"></i> Radeon RX 580 (2048SP)</div>
+                        <div class="flex items-center font-medium"><i class="fas fa-memory w-5 text-blue-500"></i> 16 Go RAM DDR4</div>
+                        <div class="flex items-center font-medium"><i class="fas fa-hdd w-5 text-blue-500"></i> 850 Go Full SSD</div>
+                        
+                        <div class="mt-4 bg-slate-50 p-3 rounded-xl border border-slate-100 italic text-[11px]">
+                            "Look Full White, ultra-propre, idéal Fortnite / Valorant / GTA V."
                         </div>
                     </div>
 
                     <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
                         <div class="flex flex-col">
-                            <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Prix total</span>
+                            <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest text-blue-600">Dispo Immédiate</span>
                             <span class="text-3xl font-black text-slate-900">445 €</span>
                         </div>
-                        <a href="https://wa.me/648541246?text=Bonjour, je suis intéressé par votre PC Gamer White à 445€" 
-                           class="bg-[#25D366] text-white p-4 rounded-2xl font-bold hover:shadow-lg transition flex items-center">
+                        <a href="https://wa.me/33600000000?text=Bonjour, je suis intéressé par le PC Gamer White à 445€" 
+                           class="bg-[#25D366] text-white p-4 rounded-2xl font-bold hover:scale-110 transition shadow-lg shadow-green-200">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="border-4 border-dashed border-slate-200 rounded-3xl flex items-center justify-center p-12 text-slate-300 italic flex-col text-center">
-                <i class="fas fa-plus-circle text-4xl mb-4 text-slate-200"></i>
-                Prochain montage en cours...
+            <div class="border-4 border-dashed border-slate-200 rounded-3xl flex items-center justify-center p-12 text-slate-300 italic flex-col text-center opacity-60">
+                <i class="fas fa-hammer text-4xl mb-4"></i>
+                <p class="font-bold">PC n°2 en préparation</p>
+                <p class="text-xs">Bientôt disponible...</p>
+            </div>
+            
+            <div class="border-4 border-dashed border-slate-200 rounded-3xl flex items-center justify-center p-12 text-slate-300 italic flex-col text-center opacity-30">
+                <i class="fas fa-box-open text-4xl mb-4"></i>
+                <p class="text-xs text-slate-300">Emplacement PC n°3</p>
             </div>
 
         </div>
     </main>
 
     <footer class="bg-white border-t py-12 text-center">
-        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest leading-loose">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-loose">
             Opti-build PC © 2026<br>
             Montage soigné & Composants certifiés
         </p>
