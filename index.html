@@ -9,6 +9,8 @@
     <style>
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .modal { transition: opacity 0.25s ease; flex-direction: column; }
+        body.modal-active { overflow: hidden; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
@@ -21,14 +23,14 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
-                <span class="text-[10px] font-bold text-green-700 uppercase">En stock</span>
+                <span class="text-[10px] font-bold text-green-700 uppercase tracking-widest">En stock</span>
             </div>
         </div>
     </nav>
 
     <header class="bg-slate-900 text-white py-12 px-4 text-center">
         <h2 class="text-3xl font-extrabold mb-2 uppercase tracking-tight">PC Gaming de Précision</h2>
-        <p class="text-slate-400 text-sm">Montage White Edition & Performances Optimisées</p>
+        <p class="text-slate-400 text-sm italic">"Le montage de qualité accessible à tous"</p>
     </header>
 
     <main class="max-w-6xl mx-auto py-8 px-4">
@@ -36,43 +38,36 @@
             
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col h-full transition duration-300">
                 
-                <div class="relative group">
+                <div class="relative">
                     <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-72 bg-slate-200">
                         <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/bRWGv3bP/IMG-20260307-182630.jpg" class="w-full h-full object-cover shadow-inner"></div>
                         <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/ycDHxnz0/IMG-20260307-182556.jpg" class="w-full h-full object-cover"></div>
                         <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/8DTJ7LSk/IMG-20260307-182552.jpg" class="w-full h-full object-cover"></div>
                         <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/N6g1xC5X/IMG-20260307-182609.jpg" class="w-full h-full object-cover"></div>
                     </div>
-                    <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-3 py-1 rounded-full backdrop-blur-sm font-medium">
-                        Glissez pour les photos <i class="fas fa-arrow-right ml-1"></i>
+                    <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-3 py-1 rounded-full backdrop-blur-sm">
+                        Glissez les photos <i class="fas fa-arrow-right ml-1"></i>
                     </div>
-                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Full White & RGB</span>
                 </div>
                 
                 <div class="p-6 flex flex-col flex-grow">
                     <h4 class="text-xl font-black text-slate-800 leading-tight">PC Gaming White - i5-9400 | RX 580</h4>
                     
-                    <div class="mt-4 space-y-2 text-sm text-slate-600 flex-grow font-medium">
-                        <div class="flex items-center"><i class="fas fa-microchip w-5 text-blue-500 text-xs"></i> i5-9400 (Turbo 4.10 GHz)</div>
-                        <div class="flex items-center"><i class="fas fa-video w-5 text-blue-500 text-xs"></i> Radeon RX 580 (2048SP)</div>
-                        <div class="flex items-center"><i class="fas fa-memory w-5 text-blue-500 text-xs"></i> 16 Go RAM DDR4</div>
-                        <div class="flex items-center"><i class="fas fa-hdd w-5 text-blue-500 text-xs"></i> 850 Go Full SSD</div>
-                        
-                        <div class="mt-4 bg-blue-50 p-3 rounded-xl border border-blue-100">
-                            <p class="text-[11px] font-bold text-blue-800 uppercase mb-1">Options (Retrait place) :</p>
-                            <p class="text-xs text-blue-700 leading-relaxed">• Écran 22" FHD (+30€)<br>• Pack Périphériques neufs (+50€)</p>
-                        </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase">i5-9400</span>
+                        <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase">RX 580</span>
+                        <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase">16Go RAM</span>
                     </div>
 
-                    <div class="mt-8 pt-4 border-t border-slate-100 flex items-center justify-between">
-                        <div class="flex flex-col">
-                            <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest text-blue-600">Offre Spéciale</span>
-                            <span class="text-3xl font-black text-slate-900">445 €</span>
-                        </div>
+                    <button onclick="toggleModal('modal-pc1')" class="mt-4 w-full bg-slate-100 text-slate-700 py-3 rounded-xl font-bold text-sm hover:bg-slate-200 transition">
+                        <i class="fas fa-list-ul mr-2"></i> Voir description complète
+                    </button>
+
+                    <div class="mt-auto pt-6 flex items-center justify-between border-t border-slate-50 mt-6">
+                        <span class="text-3xl font-black text-slate-900 tracking-tighter">445 €</span>
                         <a href="https://wa.me/33648541246?text=Bonjour, je suis intéressé par le PC Gamer White à 445€" 
-                           target="_blank"
-                           class="bg-[#25D366] text-white p-4 rounded-2xl font-bold hover:scale-110 transition shadow-lg shadow-green-200">
-                            <i class="fab fa-whatsapp text-2xl"></i>
+                           class="bg-[#25D366] text-white px-5 py-3 rounded-2xl font-bold hover:scale-105 transition flex items-center shadow-lg shadow-green-100">
+                            <i class="fab fa-whatsapp text-xl mr-2"></i> Acheter
                         </a>
                     </div>
                 </div>
@@ -80,24 +75,64 @@
 
             <div class="border-4 border-dashed border-slate-200 rounded-3xl flex items-center justify-center p-12 text-slate-300 italic flex-col text-center opacity-70">
                 <i class="fas fa-hammer text-4xl mb-4 text-slate-200"></i>
-                <p class="font-bold text-slate-400">PC n°2 en cours...</p>
-                <p class="text-[10px] uppercase tracking-widest mt-2">Bientôt disponible</p>
-            </div>
-            
-            <div class="border-4 border-dashed border-slate-100 rounded-3xl flex items-center justify-center p-12 text-slate-200 italic flex-col text-center">
-                <i class="fas fa-plus text-2xl mb-2 opacity-50"></i>
-                <p class="text-[10px] uppercase tracking-widest">Emplacement libre</p>
+                <p class="font-bold text-slate-400">Prochain montage...</p>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-white border-t py-12 text-center mt-8">
-        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-loose">
-            Opti-build PC © 2026<br>
-            Montage de précision & Performance Garantie
-        </p>
-    </footer>
+    <div id="modal-pc1" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-3xl max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-2xl font-black text-slate-800">Fiche Technique Détaillée</h3>
+                    <button onclick="toggleModal('modal-pc1')" class="text-slate-400 hover:text-slate-600 text-2xl"><i class="fas fa-times"></i></button>
+                </div>
+                
+                <div class="space-y-4 text-slate-600 text-sm leading-relaxed">
+                    <p class="bg-blue-50 p-4 rounded-2xl text-blue-800 font-medium">
+                        Vends superbe PC Gaming au look "Full White" impeccable, ultra-propre et très performant en 1080p (Fortnite, Valorant, GTA V, etc.).
+                    </p>
+                    
+                    <h5 class="font-black text-slate-800 uppercase text-xs tracking-widest mt-6">✨ Contrôle Total</h5>
+                    <p>Gérez l'esthétique et le refroidissement par télécommande : changez les couleurs RGB et ajustez la vitesse des ventilateurs (Mode Silence ou Airflow Max).</p>
+
+                    <h5 class="font-black text-slate-800 uppercase text-xs tracking-widest mt-6">➡️ ⚙️ Caractéristiques</h5>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i><strong>Processeur :</strong> Intel Core i5-9400 (Turbo 4.10 GHz)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i><strong>Graphismes :</strong> AMD Radeon RX 580 (2048SP)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i><strong>Mémoire :</strong> 16 Go DDR4 (Multitâche fluide)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i><strong>Stockage :</strong> Triple SSD (~850 Go total)
+                            <div class="pl-6 text-xs text-slate-500 mt-1">
+                                - 128 Go NVMe (Windows 10 rapide)<br>
+                                - 240 Go Kingston A400 (Jeux)<br>
+                                - 480 Go Kingston A400 (Vidéos/Stockage)
+                            </div>
+                        </li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i><strong>Boîtier :</strong> Nfortec Blanc + Vitre verre trempé</li>
+                    </ul>
+
+                    <div class="bg-slate-100 p-4 rounded-2xl">
+                        <h5 class="font-black text-slate-800 uppercase text-[10px] mb-2">Options (Retrait place)</h5>
+                        <p>• Écran FHD 22" : <strong>+30€</strong></p>
+                        <p>• Pack périphériques complet neuf : <strong>+50€</strong></p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/33648541246" class="mt-8 w-full bg-[#25D366] text-white py-4 rounded-2xl font-black text-center block shadow-lg">
+                    RESERVER CE PC
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.toggle('hidden');
+            document.body.classList.toggle('modal-active');
+        }
+    </script>
 
 </body>
     </html>
