@@ -64,5 +64,111 @@
                         <p><i class="fas fa-video mr-2 text-blue-500 opacity-50"></i> Radeon RX 580 (2048SP)</p>
                         <p><i class="fas fa-memory mr-2 text-blue-500 opacity-50"></i> 16 Go DDR4</p>
                     </div>
-                    <button onclick="toggleModal('modal-pc1')" class="mt-6
-                        
+                    <button onclick="toggleModal('modal-pc1')" class="mt-6 w-full border border-slate-100 py-3 rounded-2xl font-bold text-[10px] uppercase tracking-widest text-slate-400 hover:bg-slate-50 transition">Détails techniques</button>
+                    <div class="mt-6 pt-6 border-t flex justify-between items-center">
+                        <span class="text-2xl font-black">445 €</span>
+                        <a href="https://wa.me/33648541246?text=Bonjour, je suis intéressé par le PC Gamer i5-9400 à 445€" class="bg-[#25D366] text-white p-4 rounded-2xl shadow-lg shadow-green-100 hover:scale-110 transition">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden border border-slate-100 flex flex-col h-full hover:shadow-2xl transition duration-300">
+                <div class="relative">
+                    <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar h-72 bg-slate-200">
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/N2dWyX3N/IMG-20260304-174213.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/PGCMHxmF/IMG-20260304-174209.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/vSmMMW2/IMG-20260304-174108.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/sJqFsGvJ/IMG-20260304-174115.jpg" class="w-full h-full object-cover"></div>
+                        <div class="snap-center shrink-0 w-full h-full"><img src="https://i.ibb.co/cXbQ7zSr/IMG-20260304-174135.jpg" class="w-full h-full object-cover"></div>
+                    </div>
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Premier Setup</span>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <h4 class="text-xl font-black text-slate-800 leading-tight mb-4">PC Gamer White - i5-7400 | GTX 1650</h4>
+                    <div class="space-y-2 text-sm text-slate-600 flex-grow font-medium">
+                        <p><i class="fas fa-microchip mr-2 text-blue-500 opacity-50"></i> i5-7400 (3.5GHz)</p>
+                        <p><i class="fas fa-video mr-2 text-blue-500 opacity-50"></i> GTX 1650 (4 Go)</p>
+                        <p><i class="fas fa-hdd mr-2 text-blue-500 opacity-50"></i> Triple Stockage (1.3 To)</p>
+                    </div>
+                    <button onclick="toggleModal('modal-pc2')" class="mt-6 w-full border border-slate-100 py-3 rounded-2xl font-bold text-[10px] uppercase tracking-widest text-slate-400 hover:bg-slate-50 transition">Détails techniques</button>
+                    <div class="mt-6 pt-6 border-t flex justify-between items-center">
+                        <span class="text-2xl font-black">350 €</span>
+                        <a href="https://wa.me/33648541246?text=Bonjour, je suis intéressé par le PC Gamer i5-7400 à 350€" class="bg-[#25D366] text-white p-4 rounded-2xl shadow-lg shadow-green-100 hover:scale-110 transition">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-4 border-dashed border-slate-200 rounded-[2.5rem] flex items-center justify-center p-12 text-slate-300 italic flex-col text-center opacity-70">
+                <i class="fas fa-hammer text-4xl mb-4"></i>
+                <p class="font-bold text-slate-400">PC n°3 en cours...</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-white border-t py-12 text-center mt-8">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">© 2026 • Opti-build PC • Performance & Précision</p>
+    </footer>
+
+    <div id="modal-pc1" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-slate-900/90 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-[2.5rem] max-h-[85vh] overflow-y-auto p-8 shadow-2xl">
+            <div class="flex justify-between items-start mb-6 font-black uppercase text-xl">
+                <h3>Fiche Technique</h3>
+                <button onclick="toggleModal('modal-pc1')" class="text-slate-300"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="space-y-4 text-sm font-medium leading-relaxed text-slate-600">
+                <p class="bg-blue-50 p-6 rounded-[2rem] text-blue-800 italic">"Look Full White impeccable, idéal pour Fortnite, Valorant, GTA V..."</p>
+                <ul class="space-y-2">
+                    <li>• Processeur : Intel Core i5-9400 (4.10 GHz Turbo)</li>
+                    <li>• Graphique : AMD Radeon RX 580 (2048SP)</li>
+                    <li>• Mémoire : 16 Go DDR4</li>
+                    <li>• Stockage : 850 Go SSD (Triple Stockage)</li>
+                </ul>
+                <div class="bg-slate-50 p-4 rounded-2xl text-[11px] uppercase tracking-wider">
+                    Options : Écran FHD (+30€) | Pack Périphériques neufs (+50€)
+                </div>
+            </div>
+            <a href="https://wa.me/33648541246" class="mt-8 block bg-[#25D366] text-white py-5 rounded-3xl font-black text-center shadow-lg">CONTACTER SUR WHATSAPP</a>
+        </div>
+    </div>
+
+    <div id="modal-pc2" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-slate-900/90 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-lg rounded-[2.5rem] max-h-[85vh] overflow-y-auto p-8 shadow-2xl">
+            <div class="flex justify-between items-start mb-6 font-black uppercase text-xl text-slate-900">
+                <h3>Fiche Technique</h3>
+                <button onclick="toggleModal('modal-pc2')" class="text-slate-300"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="space-y-4 text-sm font-medium leading-relaxed text-slate-600">
+                <p class="bg-blue-50 p-6 rounded-[2rem] text-blue-800 italic">"Look Full White moderne, idéal pour premier setup (Fortnite, Roblox, Minecraft)."</p>
+                <ul class="space-y-2">
+                    <li>• Processeur : Intel Core i5-7400 (3.50 GHz Turbo)</li>
+                    <li>• Graphique : NVIDIA GeForce GTX 1650 4 Go</li>
+                    <li>• Mémoire : 12 Go DDR4</li>
+                    <li>• Stockage : 1.3 To Triple Stockage (2 SSD + 1 To HDD)</li>
+                    <li>• Système : Windows 11 Pro</li>
+                </ul>
+                <div class="bg-slate-50 p-4 rounded-2xl text-[11px] uppercase tracking-wider">
+                    Note : Boîtier Mars Gaming blanc avec 3 ventilateurs FRGB (boîtier d'occasion très propre).
+                </div>
+                <div class="bg-slate-50 p-4 rounded-2xl text-[11px] uppercase tracking-wider mt-2">
+                    Options : Écran FHD (+30€) | Pack Périphériques neufs (+50€)
+                </div>
+            </div>
+            <a href="https://wa.me/33648541246" class="mt-8 block bg-[#25D366] text-white py-5 rounded-3xl font-black text-center shadow-lg uppercase tracking-widest text-xs">Réserver ce PC (350€)</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.toggle('hidden');
+            document.body.classList.toggle('modal-active');
+        }
+    </script>
+</body>
+                            </html>
+                            
