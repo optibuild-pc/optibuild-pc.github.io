@@ -6,20 +6,32 @@
     <title>Opti-build PC | Montage Expert à Valenciennes</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); transform: scale(1.05); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
+        }
+        .whatsapp-button { animation: pulse-green 2s infinite; background-color: #25D366; }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-   <nav class="bg-white shadow-sm sticky top-0 z-50 px-4 py-4 font-bold uppercase tracking-widest text-[10px]">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tighter normal-case">Opti-build PC</a>
-        <div class="flex space-x-3 md:space-x-6 text-slate-500">
-            <a href="index.html" class="hover:text-blue-600 transition">Accueil</a>
-            <a href="boutique.html" class="hover:text-blue-600 transition">Boutique</a>
-            <a href="avis.html" class="hover:text-blue-600 transition">Avis</a>
-            <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    <a href="https://wa.me/33751121610" target="_blank" class="whatsapp-button fixed bottom-6 right-6 z-[999] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-4xl border-2 border-white">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50 px-4 py-4 font-bold uppercase tracking-widest text-[10px]">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-black text-blue-600 tracking-tighter normal-case">Opti-build PC</h1>
+            <div class="flex space-x-3 md:space-x-6 text-slate-500">
+                <a href="index.html" class="text-blue-600">Accueil</a>
+                <a href="boutique.html" class="hover:text-blue-600 transition">Boutique</a>
+                <a href="avis.html" class="hover:text-blue-600 transition">Avis</a>
+                <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <section class="relative bg-slate-900 text-white py-24 px-4 text-center overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
@@ -34,27 +46,14 @@
 
     <section class="py-20 px-4 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div>
-                <i class="fas fa-vial text-4xl text-blue-500 mb-6"></i>
-                <h4 class="font-black uppercase italic mb-4">Fiabilité Garantie</h4>
-                <p class="text-slate-500 text-sm font-medium">Chaque PC subit des tests de stress intensifs pour garantir une stabilité parfaite en jeu.</p>
-            </div>
-            <div>
-                <i class="fas fa-tools text-4xl text-blue-500 mb-6"></i>
-                <h4 class="font-black uppercase italic mb-4">Montage Pro</h4>
-                <p class="text-slate-500 text-sm font-medium">Câblage propre, pâte thermique neuve et optimisation logicielle complète.</p>
-            </div>
-            <div>
-                <i class="fas fa-handshake text-4xl text-blue-500 mb-6"></i>
-                <h4 class="font-black uppercase italic mb-4">Service Local</h4>
-                <p class="text-slate-500 text-sm font-medium">Basé à Valenciennes. Test sur place et remise en main propre uniquement.</p>
-            </div>
+            <div><i class="fas fa-vial text-4xl text-blue-500 mb-6"></i><h4 class="font-black uppercase italic mb-4">Fiabilité</h4><p class="text-slate-500 text-sm">Tests de stress complets.</p></div>
+            <div><i class="fas fa-tools text-4xl text-blue-500 mb-6"></i><h4 class="font-black uppercase italic mb-4">Montage Pro</h4><p class="text-slate-500 text-sm">Câblage et pâte thermique.</p></div>
+            <div><i class="fas fa-handshake text-4xl text-blue-500 mb-6"></i><h4 class="font-black uppercase italic mb-4">Local</h4><p class="text-slate-500 text-sm">Valenciennes et environs.</p></div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-12 text-center border-t border-white/5">
-        <p class="text-[9px] text-slate-500 uppercase tracking-[0.4em]">© 2026 • Opti-build PC • Valenciennes</p>
+    <footer class="bg-slate-900 text-white py-12 text-center border-t border-white/5 font-bold uppercase tracking-[0.4em] text-[9px] text-slate-500">
+        © 2026 • Opti-build PC • Valenciennes
     </footer>
-
 </body>
 </html>
