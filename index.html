@@ -3,102 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opti-build PC | Montage Expert à Valenciennes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <title>Opti-build PC | Expert PC Gamer sur mesure à Valenciennes</title>
+    <meta name="description" content="Montage d'ordinateurs gaming sur mesure à Valenciennes. Plus de 30 clients satisfaits. Devis gratuit, optimisation et composants haute qualité.">
+
     <style>
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); transform: scale(1); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); transform: scale(1.05); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); transform: scale(1); }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background-color: #0b0e14; 
+            color: white; 
+            line-height: 1.6;
         }
-        .whatsapp-main-btn { animation: pulse-green 2s infinite; }
-        .hero-banner {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), 
-                              url('https://images.unsplash.com/photo-1587202372775-e229f172b9d7?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        
+        header { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background: linear-gradient(135deg, #0b0e14 0%, #1a2a44 100%); 
+            border-bottom: 2px solid #00d4ff;
         }
-        #tchat-window { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        #tchat-window.hidden-tchat { opacity: 0; transform: scale(0.8) translateY(20px); pointer-events: none; }
+
+        h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; text-transform: uppercase; }
+        .subtitle { color: #00d4ff; font-weight: bold; text-transform: uppercase; font-size: 0.9em; letter-spacing: 1px; }
+
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+
+        .card {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        /* WIDGET WHATSAPP PERSONNALISÉ */
+        #wa-widget {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1000;
+        }
+
+        /* Fenêtre de Chat qui s'ouvre */
+        #wa-window {
+            display: none;
+            width: 300px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 15px;
+            overflow: hidden;
+            text-align: left;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .wa-header {
+            background: #1a2a44;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Petit logo Opti-build dans le chat */
+        .wa-logo-small {
+            width: 45px;
+            height: 45px;
+            background: #0b0e14;
+            border-radius: 50%;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #00d4ff;
+        }
+
+        .wa-body {
+            padding: 20px;
+            color: #333;
+            font-size: 14px;
+            background: #f0f2f5;
+        }
+
+        .wa-btn {
+            display: block;
+            background: #25d366;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .wa-btn:hover { background: #1da851; }
+
+        /* BOUTON FLOTTANT (TON LOGO) */
+        .wa-float-button {
+            width: 65px;
+            height: 65px;
+            background-color: #1a2a44;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,212,255,0.4);
+            border: 2px solid #00d4ff;
+            animation: pulse 2s infinite;
+            transition: 0.3s;
+        }
+
+        .wa-float-button:hover { transform: scale(1.1); }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 212, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #8b949e;
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body>
 
-    <div id="whatsapp-wrapper" class="fixed bottom-6 right-6 z-[999] flex flex-col items-end">
-        <div id="tchat-window" class="hidden-tchat bg-white rounded-[2rem] shadow-2xl w-72 mb-4 overflow-hidden border border-slate-100">
-            <div class="bg-blue-600 p-5 text-white flex items-center gap-3">
-                <div class="relative">
-                    <div class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center text-xl shadow-inner">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-blue-600 rounded-full"></span>
-                </div>
-                <div>
-                    <p class="text-[10px] font-black uppercase opacity-80 leading-none tracking-widest">Expert en ligne</p>
-                    <p class="text-sm font-black italic">Opti-build PC</p>
-                </div>
-                <button onclick="toggleTchat()" class="ml-auto opacity-50 hover:opacity-100 text-xs">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="p-5 bg-slate-50">
-                <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 italic text-xs text-slate-600 leading-relaxed mb-4">
-                    "Bonjour ! Je suis dispo pour vous conseiller sur une config ou un montage sur mesure. <br><br><strong>Je réponds généralement en moins de 5 min.</strong>"
-                </div>
-                <p class="text-[9px] font-black uppercase text-slate-400 text-center mb-4 tracking-tighter">Discussion sécurisée via WhatsApp</p>
-                <a href="https://wa.me/33769188046" target="_blank" class="block bg-[#25D366] text-white text-center py-4 rounded-xl text-[10px] font-black uppercase italic tracking-[0.1em] shadow-lg hover:bg-[#1eb954] transition-colors">
-                    Démarrer la discussion
-                </a>
-            </div>
+    <header>
+        <h1>OPTI-BUILD PC</h1>
+        <p class="subtitle">L'expertise gaming à Valenciennes</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Montages PC Haut de Gamme</h2>
+            <p>Spécialiste du montage d'ordinateurs sur mesure. Que ce soit pour le gaming intensif ou le travail créatif, je conçois la machine qui répond à vos besoins.</p>
+            <p>✅ Plus de 30 configurations réalisées<br>
+               ✅ Stress-test de 2h inclus<br>
+               ✅ Cable management soigné</p>
         </div>
 
-        <button onclick="toggleTchat()" class="whatsapp-main-btn bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl border-2 border-white relative transition-transform active:scale-90">
-            <i class="fab fa-whatsapp"></i>
-            <span id="notif-badge" class="absolute -top-1 -right-1 flex h-6 w-6">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-6 w-6 bg-red-500 text-[10px] items-center justify-center font-black text-white">1</span>
-            </span>
-        </button>
+        <div class="card">
+            <h2>Pourquoi choisir Opti-build ?</h2>
+            <p>Basé à <strong>Valenciennes</strong>, je privilégie la proximité et la qualité. Chaque composant est choisi avec soin et chaque PC est livré prêt à l'emploi (BIOS à jour, drivers installés).</p>
+        </div>
     </div>
 
-    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 px-4 py-4 font-bold uppercase tracking-widest text-[10px]">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-black text-blue-600 tracking-tighter normal-case">Opti-build PC</h1>
-            <div class="flex space-x-3 md:space-x-6 text-slate-500">
-                <a href="index.html" class="text-blue-600">Accueil</a>
-                <a href="#" class="hover:text-blue-600 transition">Boutique</a>
-                <a href="#" class="hover:text-blue-600 transition">Avis</a>
-                <a href="#" class="hover:text-blue-600 transition">Contact</a>
+    <div id="wa-widget">
+        <div id="wa-window">
+            <div class="wa-header">
+                <div class="wa-logo-small">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="3" width="14" height="18" rx="2" stroke="#00d4ff" stroke-width="2"/>
+                        <circle cx="12" cy="8" r="3" stroke="#00d4ff" stroke-width="1.5"/>
+                        <path d="M8 15h8M8 18h4" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <div style="font-weight: bold; font-size: 15px;">Opti-build PC</div>
+                    <div style="font-size: 11px; color: #00d4ff;">En ligne (Réponse rapide)</div>
+                </div>
             </div>
+            <div class="wa-body">
+                Bonjour ! Comment puis-je vous aider dans votre projet de montage PC ?
+            </div>
+            <a href="https://wa.me/33769188046" class="wa-btn" target="_blank">Démarrer la discussion</a>
         </div>
-    </nav>
 
-    <section class="hero-banner relative min-h-[85vh] flex items-center justify-center text-center px-4">
-        <div class="max-w-4xl mx-auto text-white">
-            <span class="bg-blue-600 text-white text-[9px] font-black px-4 py-1.5 rounded-full uppercase tracking-[0.3em] mb-8 inline-block shadow-lg">Performance & Précision</span>
-            <h2 class="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter leading-none italic">
-                L'Expert PC <br> <span class="text-blue-500">Valenciennes</span>
-            </h2>
-            <p class="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-medium italic">
-                Montage de configurations Gaming & Travail. <br> Plus de 30 clients satisfaits à Valenciennes.
-            </p>
-        </div>
-    </section>
-
-    <script>
-        function toggleTchat() {
-            const windowTchat = document.getElementById('tchat-window');
-            const badge = document.getElementById('notif-badge');
-            if (windowTchat.classList.contains('hidden-tchat')) {
-                windowTchat.classList.remove('hidden-tchat');
-                badge.style.display = 'none';
-            } else {
-                windowTchat.classList.add('hidden-tchat');
-            }
-        }
-    </script>
-</body>
-</html>
+        <div class="wa-float-button
