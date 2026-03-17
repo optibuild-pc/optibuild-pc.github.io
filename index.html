@@ -3,31 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opti-build PC | PC Gamer sur mesure Valenciennes</title>
-    <meta name="description" content="Expert en montage de PC Gaming sur mesure à Valenciennes. Plus de 30 clients satisfaits.">
     
+    <title>Opti-build PC | Expert PC Gamer sur mesure à Valenciennes</title>
+    <meta name="description" content="Montage d'ordinateurs gaming sur mesure à Valenciennes. Plus de 30 clients satisfaits. Devis gratuit, optimisation et composants haute qualité.">
+    <meta name="keywords" content="PC Gamer, Valenciennes, Montage PC, Ordinateur sur mesure, Gaming, Opti-build PC, Nord">
+
     <style>
-        body { font-family: sans-serif; margin: 0; background-color: #0b0e14; color: white; text-align: center; }
-        header { padding: 50px; background: #1a2a44; border-bottom: 2px solid #00d4ff; }
-        .container { padding: 20px; }
-        img { width: 100%; max-width: 500px; border-radius: 10px; margin: 20px 0; border: 1px solid #00d4ff; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            background-color: #0b0e14; 
+            color: white; 
+            line-height: 1.6;
+        }
         
-        /* Nouveau Bouton WhatsApp Flottant */
-        .whatsapp-btn {
+        header { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background: linear-gradient(135deg, #0b0e14 0%, #1a2a44 100%); 
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; }
+        .subtitle { color: #00d4ff; font-weight: bold; text-transform: uppercase; }
+
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            padding: 40px 20px; 
+            text-align: center; 
+        }
+
+        .card {
+            background: #161b22;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            margin-bottom: 30px;
+        }
+
+        /* Bouton WhatsApp Flottant */
+        .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background-color: #25d366;
             color: white;
-            padding: 15px 25px;
+            padding: 12px 25px;
             border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
             display: flex;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             z-index: 1000;
+            transition: transform 0.3s ease;
             animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            background-color: #20ba5a;
         }
 
         @keyframes pulse {
@@ -36,12 +71,17 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        .pc-icon {
+        .logo-wa {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
-            border-radius: 50%;
-            border: 1px solid white;
+            margin-right: 12px;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #8b949e;
         }
     </style>
 </head>
@@ -49,29 +89,34 @@
 
     <header>
         <h1>OPTI-BUILD PC</h1>
-        <p>Montage d'ordinateurs Haute Performance à Valenciennes</p>
+        <p class="subtitle">L'expertise gaming à Valenciennes</p>
     </header>
 
     <div class="container">
-        <h2>Nos dernières réalisations</h2>
-        
-        <img src="https://raw.githubusercontent.com/ton-pseudo/opti-build-pc/main/pc-msi.jpg" alt="PC MSI White">
-        <p>Configuration MSI White Edition - Optimisée pour le 1440p</p>
-        
-        <img src="https://raw.githubusercontent.com/ton-pseudo/opti-build-pc/main/pc-noir.jpg" alt="PC Gamer Noir">
-        <p>Setup Full Black - Performance et Silence</p>
+        <div class="card">
+            <h2>Montages PC Haut de Gamme</h2>
+            <p>Spécialiste du montage d'ordinateurs sur mesure. Que ce soit pour le gaming intensif ou le travail créatif, je conçois la machine qui répond à vos besoins.</p>
+            <p>✅ Plus de 30 configurations réalisées<br>
+               ✅ Stress-test de 2h inclus<br>
+               ✅ Cable management soigné</p>
+        </div>
+
+        <div class="card">
+            <h2>Pourquoi choisir Opti-build ?</h2>
+            <p>Basé à <strong>Valenciennes</strong>, je privilégie la proximité et la qualité. Chaque composant est choisi avec soin et chaque PC est livré prêt à l'emploi (BIOS à jour, drivers installés).</p>
+        </div>
     </div>
 
-    <a href="https://wa.me/33769188046" class="whatsapp-btn">
-        <div class="pc-icon" style="background-color: #0b0e14; display: flex; align-items: center; justify-content: center;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-        </div>
-        Discuter sur WhatsApp
+    <a href="https://wa.me/33769188046" class="whatsapp-float" target="_blank">
+        <svg class="logo-wa" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span style="font-weight: bold;">Me contacter</span>
     </a>
+
+    <footer>
+        © 2026 Opti-build PC - Valenciennes
+    </footer>
 
 </body>
 </html>
