@@ -36,9 +36,9 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <div id="whatsapp-wrapper" class="fixed bottom-6 right-6 z-[999] flex flex-col items-end">
+    <div id="whatsapp-wrapper" class="fixed bottom-6 right-6 z-[999] flex flex-col items-end" style="pointer-events: none;">
         
-        <div id="tchat-window" class="hidden-tchat bg-white rounded-[2rem] shadow-2xl w-72 mb-4 overflow-hidden border border-slate-100">
+        <div id="tchat-window" class="hidden-tchat bg-white rounded-[2rem] shadow-2xl w-72 mb-4 overflow-hidden border border-slate-100" style="pointer-events: auto;">
             <div class="bg-blue-600 p-5 text-white flex items-center gap-3">
                 <div class="relative">
                     <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-xl">
@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        <button onclick="toggleTchat()" class="whatsapp-main-btn bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl border-2 border-white relative transition-transform active:scale-90">
+        <button onclick="toggleTchat()" class="whatsapp-main-btn bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-3xl border-2 border-white relative transition-transform active:scale-90" style="pointer-events: auto;">
             <i class="fab fa-whatsapp"></i>
             <span id="notif-badge" class="absolute -top-1 -right-1 flex h-6 w-6">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -150,20 +150,11 @@
             
             if (windowTchat.classList.contains('hidden-tchat')) {
                 windowTchat.classList.remove('hidden-tchat');
-                // On cache le badge quand on a ouvert le tchat une fois
                 badge.style.display = 'none';
             } else {
                 windowTchat.classList.add('hidden-tchat');
             }
         }
-
-        // Optionnel : Ouvre le tchat automatiquement après 5 secondes
-        setTimeout(() => {
-            const windowTchat = document.getElementById('tchat-window');
-            if (windowTchat.classList.contains('hidden-tchat')) {
-                // toggleTchat(); // Décommenter si tu veux que ça s'ouvre tout seul
-            }
-        }, 5000);
     </script>
 
 </body>
