@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurateur | Opti-build PC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
 
+    <nav class="bg-white shadow-sm sticky top-0 z-50 px-4 py-4 font-bold uppercase tracking-widest text-[10px]">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tighter normal-case">Opti-build PC</a>
+            <div class="flex space-x-6 text-slate-500">
+                <a href="index.html" class="hover:text-blue-600 transition">Accueil</a>
+                <a href="boutique.html" class="hover:text-blue-600 transition">Boutique</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto py-16 px-4">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-black uppercase italic tracking-tighter mb-4">Configurateur <span class="text-blue-600">Sur Mesure</span></h1>
+            <p class="text-slate-500 italic">Configure ton PC idéal et reçois ton devis personnalisé.</p>
+        </header>
+
+        <div class="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-slate-100">
+            <form id="configForm" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-black uppercase italic text-slate-400 mb-2">Budget approximatif</label>
+                    <select id="budget" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold uppercase text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                        <option value="300-500€">300€ - 500€</option>
+                        <option value="500-800€">500€ - 800€</option>
+                        <option value="800-1200€">800€ - 1200€</option>
+                        <option value="1200€ +">1200€ et plus</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black uppercase italic text-slate-400 mb-2">Usage principal</label>
+                    <select id="usage" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold uppercase text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                        <option value="Gaming casual">Gaming casual</option>
+                        <option value="Gaming compétitif (FPS)">Gaming compétitif (FPS)</option>
+                        <option value="Streaming / Montage">Streaming / Montage</option>
+                        <option value="Bureautique / Travail">Bureautique / Travail</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black uppercase italic text-slate-400 mb-2">Style du boîtier</label>
+                    <select id="style" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold uppercase text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                        <option value="Sobre / Discret">Sobre / Discret</option>
+                        <option value="RGB / Gaming">RGB / Gaming</option>
+                        <option value="Blanc épuré">Blanc épuré</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-black uppercase italic text-slate-400 mb-2">Précisions (jeux, logiciels...)</label>
+                    <textarea id="precision" rows="3" placeholder="Ex: Je joue beaucoup à Warzone et Valorant..." class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                </div>
+
+                <a id="whatsappBtn" href="#" target="_blank" class="block w-full bg-[#25D366] text-white text-center py-5 rounded-2xl font-black uppercase italic text-sm tracking-widest shadow-lg hover:bg-[#1eb954] transition">
+                    Envoyer ma config sur WhatsApp
+                </a>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById('configForm');
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const phone = "33751121610"; // Ton numéro
+
+        function updateLink() {
+            const budget = document.getElementById('budget').value;
+            const usage = document.getElementById('usage').value;
+            const style = document.getElementById('style').value;
+            const precision = document.getElementById('precision').value;
+            
+            const message = `Bonjour, je souhaite un PC sur-mesure :%0A- Budget : ${budget}%0A- Usage : ${usage}%0A- Style : ${style}%0A- Détails : ${precision}`;
+            whatsappBtn.href = `https://wa.me/${phone}?text=${message}`;
+        }
+
+        // Met à jour le lien à chaque changement
+        form.addEventListener('input', updateLink);
+        
+        // Initialisation
+        updateLink();
+    </script>
+</body>
+</html>
