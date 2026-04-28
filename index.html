@@ -8,6 +8,14 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-banner {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                              url('https://images.unsplash.com/photo-1593341646782-e0b4458f36c5?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
@@ -24,14 +32,14 @@
         </div>
     </nav>
 
-    <header class="bg-white border-b border-slate-100 py-20 px-4 text-center overflow-hidden">
+    <header class="hero-banner py-24 px-4 text-center overflow-hidden">
         <div class="max-w-4xl mx-auto relative">
-            <span class="inline-block bg-blue-50 text-blue-600 text-[10px] font-black px-4 py-2 rounded-full uppercase italic mb-4">Ton expert PC à Valenciennes (59)</span>
-            <h1 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter leading-none mb-6">Domine la partie avec <br><span class="text-blue-600">Opti-build PC</span></h1>
-            <p class="text-slate-600 text-lg mb-10 max-w-2xl mx-auto">Du PC Gamer ultra-performant à la configuration bureautique optimisée, je crée la machine parfaite pour ton budget. Montage pro, composants certifiés, service local.</p>
+            <span class="inline-block bg-blue-600 text-white text-[10px] font-black px-4 py-2 rounded-full uppercase italic mb-4 shadow-lg">Ton expert PC à Valenciennes (59)</span>
+            <h1 class="text-5xl md:text-6xl font-black uppercase italic tracking-tighter leading-none mb-6 text-white">Domine la partie avec <br><span class="text-blue-500">Opti-build PC</span></h1>
+            <p class="text-slate-200 text-lg mb-10 max-w-2xl mx-auto">Du PC Gamer ultra-performant à la configuration bureautique optimisée, je crée la machine parfaite pour ton budget. Montage pro, composants certifiés, service local.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="boutique.html" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black uppercase italic text-[11px] tracking-widest shadow-lg hover:bg-blue-700 transition">Voir le stock disponible</a>
-                <a href="contact.html" class="bg-slate-100 text-slate-800 px-8 py-4 rounded-2xl font-black uppercase italic text-[11px] tracking-widest hover:bg-slate-200 transition">Demander un devis sur mesure</a>
+                <a href="contact.html" class="bg-white text-slate-900 px-8 py-4 rounded-2xl font-black uppercase italic text-[11px] tracking-widest hover:bg-slate-200 transition">Demander un devis sur mesure</a>
             </div>
         </div>
     </header>
@@ -39,7 +47,6 @@
     <section class="py-16 px-4 bg-slate-900 border-b border-slate-800">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter mb-12">Jouable :</h2>
-            
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 <div class="bg-slate-800 rounded-3xl p-6 flex flex-col items-center shadow-lg border border-slate-700 hover:border-blue-500 transition-all group">
                     <img src="https://cdn.simpleicons.org/counterstrike/white" alt="CS2" class="h-16 w-auto mb-4 group-hover:scale-110 transition-transform">
@@ -60,67 +67,6 @@
                 <div class="bg-slate-800 rounded-3xl p-6 flex flex-col items-center shadow-lg border border-slate-700 hover:border-blue-500 transition-all group">
                     <img src="https://cdn.simpleicons.org/leagueoflegends/white" alt="League of Legends" class="h-16 w-auto mb-4 group-hover:scale-110 transition-transform">
                     <span class="text-sm font-bold text-white tracking-widest uppercase">LoL</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-black uppercase italic tracking-tighter mb-16">Comment ça marche ?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black mb-6 shadow-lg group-hover:rotate-12 transition-transform">1</div>
-                    <h3 class="text-lg font-black uppercase italic mb-2 tracking-tight">Discutons de ton projet</h3>
-                    <p class="text-slate-500 text-sm">Tu m'expliques tes besoins, tes jeux préférés et ton budget. Je te propose la config idéale.</p>
-                </div>
-                <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black mb-6 shadow-lg group-hover:rotate-12 transition-transform">2</div>
-                    <h3 class="text-lg font-black uppercase italic mb-2 tracking-tight">Montage & Optimisation</h3>
-                    <p class="text-slate-500 text-sm">Je monte ta machine avec soin et j'installe les pilotes pour des performances maximales.</p>
-                </div>
-                <div class="flex flex-col items-center group">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl font-black mb-6 shadow-lg group-hover:rotate-12 transition-transform">3</div>
-                    <h3 class="text-lg font-black uppercase italic mb-2 tracking-tight">Prêt à jouer</h3>
-                    <p class="text-slate-500 text-sm">Tu viens récupérer ton PC à Valenciennes. Il est branché, installé et prêt à dominer la partie.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 max-w-7xl mx-auto border-t border-slate-100">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all">
-                <i class="fas fa-tools text-5xl text-blue-600 mb-6 block"></i>
-                <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-3">Montage sur mesure</h3>
-                <p class="text-slate-600 text-sm">Chaque composant est choisi avec soin pour répondre parfaitement à tes besoins, que ce soit pour le gaming, le streaming ou le travail.</p>
-            </div>
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all">
-                <i class="fas fa-check-circle text-5xl text-blue-600 mb-6 block"></i>
-                <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-3">Qualité certifiée</h3>
-                <p class="text-slate-600 text-sm">Toutes mes configurations sont testées rigoureusement avant la vente pour garantir stabilité, performance et silence.</p>
-            </div>
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 hover:shadow-2xl transition-all">
-                <i class="fas fa-map-marker-alt text-5xl text-blue-600 mb-6 block"></i>
-                <h3 class="text-2xl font-black uppercase italic tracking-tighter mb-3">Service local</h3>
-                <p class="text-slate-600 text-sm">Basé à Valenciennes, je t'offre un suivi personnalisé, un SAV réactif et la possibilité de retirer ta machine en main propre.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 rounded-[2.5rem] p-10 md:p-16 text-center shadow-2xl overflow-hidden border-4 border-blue-200">
-                <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
-                
-                <div class="relative z-10 max-w-2xl mx-auto">
-                    <span class="inline-block bg-white/10 text-blue-100 text-[10px] font-black px-4 py-2 rounded-full uppercase italic mb-4">Expertise et Proximité</span>
-                    <h3 class="text-3xl md:text-4xl font-black text-white uppercase italic tracking-tighter leading-none mb-6">Besoin d'un conseil <br>pour ton futur PC ?</h3>
-                    <p class="text-blue-50 mb-10 text-lg italic">Tu hésites sur le choix des composants ou ton budget ? Je t'aide à créer la configuration idéale. Simple, rapide et sans engagement.</p>
-                    <a href="https://wa.me/33751121610?text=Bonjour, j'aurais besoin d'un conseil pour une config PC Opti-build." target="_blank" class="inline-flex items-center gap-3 bg-white text-blue-700 px-8 py-5 rounded-2xl font-black uppercase italic text-[11px] tracking-widest hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">
-                        <i class="fab fa-whatsapp text-xl"></i>
-                        Discuter sur WhatsApp
-                    </a>
                 </div>
             </div>
         </div>
