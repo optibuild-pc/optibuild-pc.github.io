@@ -7,11 +7,19 @@
     <link rel="canonical" href="https://optibuild-pc.fr/avis.html" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .avis-hero {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+                              url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900 font-sans flex flex-col min-h-screen">
 
     <nav class="bg-white shadow-sm sticky top-0 z-50 px-4 py-4 font-bold uppercase tracking-widest text-[10px]">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-center">
             <a href="index.html" class="text-2xl font-black text-blue-600 tracking-tighter normal-case">Opti-build PC</a>
             <div class="flex space-x-3 md:space-x-6 text-slate-500">
                 <a href="index.html" class="hover:text-blue-600 transition">Accueil</a>
@@ -23,22 +31,22 @@
         </div>
     </nav>
 
-    <header class="bg-white border-b border-slate-100 py-16 px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-4">La satisfaction <br><span class="text-blue-600 font-black">avant tout</span></h2>
+    <header class="avis-hero bg-slate-900 py-24 px-4 text-center text-white">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter mb-6">La satisfaction <br><span class="text-blue-500">avant tout</span></h2>
             <div class="flex flex-col items-center gap-2">
-                <div class="flex text-yellow-400 text-2xl">
+                <div class="flex text-yellow-400 text-3xl drop-shadow-md">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="font-black text-slate-800 uppercase text-xs tracking-widest mt-2">Score de 5/5 basé sur 30+ ventes à Valenciennes</p>
+                <p class="font-bold text-slate-200 uppercase text-xs tracking-widest mt-4">Score de 5/5 basé sur 30+ ventes à Valenciennes</p>
             </div>
         </div>
     </header>
 
-    <section class="py-20 px-4 max-w-6xl mx-auto">
+    <section class="py-12 px-4 max-w-7xl mx-auto -mt-16 relative z-20 flex-grow">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 relative">
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 relative hover:-translate-y-1 transition-transform">
                 <div class="absolute -top-4 right-8 bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase italic shadow-lg">Achat vérifié</div>
                 <div class="flex text-yellow-400 mb-6 text-xs">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -46,16 +54,16 @@
                 <p class="text-slate-600 text-sm italic font-medium leading-relaxed mb-8">
                     "J'ai pris le PC White i5. Montage ultra propre, aucun câble qui dépasse. Le vendeur a pris 20 min pour tout m'expliquer. Un vrai pro sur Valenciennes."
                 </p>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between mt-auto">
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-xs mr-3">TV</div>
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-black text-xs mr-3 border border-blue-100">TV</div>
                         <span class="font-black uppercase text-[10px] text-slate-400 tracking-widest">Thomas V.</span>
                     </div>
                     <span class="text-[9px] font-bold text-slate-300">Mars 2026</span>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 relative">
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 relative hover:-translate-y-1 transition-transform">
                 <div class="absolute -top-4 right-8 bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase italic shadow-lg">Achat vérifié</div>
                 <div class="flex text-yellow-400 mb-6 text-xs">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -63,16 +71,16 @@
                 <p class="text-slate-600 text-sm italic font-medium leading-relaxed mb-8">
                     "PC parfait pour le gaming. Silencieux et performant comme annoncé. On sent la passion dans le travail. Super réactif sur WhatsApp."
                 </p>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between mt-auto">
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-xs mr-3">MK</div>
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-black text-xs mr-3 border border-blue-100">MK</div>
                         <span class="font-black uppercase text-[10px] text-slate-400 tracking-widest">Maxime K.</span>
                     </div>
                     <span class="text-[9px] font-bold text-slate-300">Avril 2026</span>
                 </div>
             </div>
 
-            <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 relative">
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 relative hover:-translate-y-1 transition-transform">
                 <div class="absolute -top-4 right-8 bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase italic shadow-lg">Achat vérifié</div>
                 <div class="flex text-yellow-400 mb-6 text-xs">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -80,9 +88,9 @@
                 <p class="text-slate-600 text-sm italic font-medium leading-relaxed mb-8">
                     "Super accueil à Valenciennes. Le PC dépasse mes espérances, il tourne super bien sur tous mes jeux. Je recommande vivement pour le rapport qualité/prix."
                 </p>
-                <div class="flex items-center justify-between">
+                <div class="flex items-center justify-between mt-auto">
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-xs mr-3">JL</div>
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-black text-xs mr-3 border border-blue-100">JL</div>
                         <span class="font-black uppercase text-[10px] text-slate-400 tracking-widest">Julien L.</span>
                     </div>
                     <span class="text-[9px] font-bold text-slate-300">Avril 2026</span>
@@ -92,7 +100,7 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-white py-12 text-center border-t border-white/5 font-bold uppercase tracking-[0.4em] text-[9px] text-slate-500">
+    <footer class="bg-slate-900 text-white py-12 text-center border-t border-white/5 font-bold uppercase tracking-[0.4em] text-[9px] text-slate-500 mt-auto">
         © 2026 • Opti-build PC • Valenciennes
     </footer>
 
