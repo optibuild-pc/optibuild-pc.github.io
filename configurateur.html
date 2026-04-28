@@ -13,6 +13,11 @@
             background-size: cover;
             background-position: center;
         }
+        /* Style pour les options désactivées */
+        option:disabled {
+            color: #cbd5e1;
+            background-color: #f1f5f9;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
@@ -49,12 +54,12 @@
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Budget (Environ)</label>
                             <select id="budget" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                                <option value="300€">300€</option>
-                                <option value="350€">350€</option>
-                                <option value="400€">400€</option>
-                                <option value="450€">450€</option>
-                                <option value="500€">500€</option>
-                                <option value="Plus de 500€">Plus de 500€</option>
+                                <option value="300">300€</option>
+                                <option value="350">350€</option>
+                                <option value="400">400€</option>
+                                <option value="450">450€</option>
+                                <option value="500">500€</option>
+                                <option value="501">Plus de 500€</option>
                             </select>
                         </div>
                         <div>
@@ -70,7 +75,7 @@
 
                 <div class="space-y-4">
                     <h2 class="text-sm font-black uppercase italic text-blue-600 border-b border-blue-100 pb-2 flex items-center gap-2">
-                        <i class="fas fa-desktop"></i> Équipement souhaité
+                        <i class="fas fa-desktop"></i> Équipement & Résolution
                     </h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
@@ -78,13 +83,13 @@
                             <select id="peripheriques" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
                                 <option value="Tour seule">Tour seule</option>
                                 <option value="Tour + Écran 22 pouces 1080p">Tour + Écran (22" 1080p)</option>
-                                <option value="Tour + Écran 22 pouces 1080p + Périphériques">Tour + Écran (22" 1080p) + Périphériques</option>
+                                <option value="Tour + Écran 22 pouces 1080p + Périphériques">Tour + Écran + Périphériques</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Résolution visée</label>
                             <select id="resolution" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
-                                <option value="1080p (Full HD)">1080p (Full HD)</option>
+                                <option value="1080p (Standard)">1080p (Standard)</option>
                                 <option value="1440p (QHD)">1440p (QHD)</option>
                                 <option value="4K">4K</option>
                             </select>
@@ -132,13 +137,53 @@
     <script>
         const form = document.getElementById('configForm');
         const whatsappBtn = document.getElementById('whatsappBtn');
+        const budgetSelect = document.getElementById('budget');
+        const equipSelect = document.getElementById('peripheriques');
+        const resSelect = document.getElementById('resolution');
+        
         const phone = "33751121610";
 
+        function checkCompatibility() {
+            const budget = parseInt(budgetSelect.value);
+            
+            // Logique de verrouillage Équipement
+            if (budget === 300) {
+                // 300€ : Tour seule uniquement
+                equipSelect.options[1].disabled = true; // Tour + Ecran
+                equipSelect.options[2].disabled = true; // Pack complet
+                if (equipSelect.selectedIndex > 0) equipSelect.selectedIndex = 0;
+            } else if (budget === 350) {
+                // 350€ : Tour + Ecran ok, mais pas le pack complet
+                equipSelect.options[1].disabled = false;
+                equipSelect.options[2].disabled = true;
+                if (equipSelect.selectedIndex === 2) equipSelect.selectedIndex = 1;
+            } else {
+                // 400€ et plus : Tout est débloqué pour l'équipement
+                equipSelect.options[1].disabled = false;
+                equipSelect.options[2].disabled = false;
+            }
+
+            // Logique de verrouillage Résolution
+            if (budget < 500) {
+                resSelect.options[1].disabled = true; // 1440p
+                resSelect.options[2].disabled = true; // 4K
+                resSelect.selectedIndex = 0;
+            } else if (budget === 500) {
+                resSelect.options[1].disabled = false;
+                resSelect.options[2].disabled = true;
+            } else {
+                resSelect.options[1].disabled = false;
+                resSelect.options[2].disabled = false;
+            }
+        }
+
         function updateLink() {
-            const budget = document.getElementById('budget').value;
+            checkCompatibility();
+            
+            const budget = budgetSelect.options[budgetSelect.selectedIndex].text;
             const usage = document.getElementById('usage').value;
-            const peripheriques = document.getElementById('peripheriques').value;
-            const resolution = document.getElementById('resolution').value;
+            const peripheriques = equipSelect.value;
+            const resolution = resSelect.value;
             const couleur = document.getElementById('couleur').value;
             const lumiere = document.getElementById('lumiere').value;
             const precision = document.getElementById('precision').value;
