@@ -155,9 +155,15 @@
                     </div>
                 </div>
 
-                <a id="whatsappBtn" href="#" target="_blank" class="block w-full bg-[#25D366] text-white text-center py-5 rounded-2xl font-black uppercase italic text-sm tracking-widest shadow-lg hover:bg-[#1eb954] transition-all hover:-translate-y-1">
-                    Envoyer ma demande sur WhatsApp
-                </a>
+                <div class="flex flex-col md:flex-row gap-4 pt-4">
+                    <a id="whatsappBtn" href="#" target="_blank" class="flex-1 bg-[#25D366] text-white text-center py-5 rounded-2xl font-black uppercase italic text-sm tracking-widest shadow-lg hover:bg-[#1eb954] transition-all hover:-translate-y-1">
+                        <i class="fab fa-whatsapp mr-2 text-lg"></i> Envoyer via WhatsApp
+                    </a>
+                    <a id="emailBtn" href="#" class="flex-1 bg-blue-600 text-white text-center py-5 rounded-2xl font-black uppercase italic text-sm tracking-widest shadow-lg hover:bg-blue-700 transition-all hover:-translate-y-1">
+                        <i class="fas fa-envelope mr-2 text-lg"></i> Envoyer par Email
+                    </a>
+                </div>
+
             </form>
         </div>
     </main>
@@ -169,45 +175,47 @@
     <script>
         const form = document.getElementById('configForm');
         const whatsappBtn = document.getElementById('whatsappBtn');
+        const emailBtn = document.getElementById('emailBtn');
+        
         const budgetSelect = document.getElementById('budget');
         const equipSelect = document.getElementById('peripheriques');
         const resSelect = document.getElementById('resolution');
         
-        const phone = "33751121610";
+        // Coordonnées Opti-build PC
+        const phone = "33751121610"; 
+        const emailAddress = "clinfo059@gmail.com"; 
 
         function checkCompatibility() {
             const budget = parseInt(budgetSelect.value);
             
-            // Logique Équipement
             if (budget === 300) {
-                equipSelect.options[1].disabled = true; // Tour + Ecran bloqué
-                equipSelect.options[2].disabled = true; // Pack complet bloqué
+                equipSelect.options[1].disabled = true;
+                equipSelect.options[2].disabled = true;
                 if (equipSelect.selectedIndex > 0) equipSelect.selectedIndex = 0;
             } else if (budget === 350) {
-                equipSelect.options[1].disabled = false; // Tour + Ecran débloqué
-                equipSelect.options[2].disabled = true;  // Pack complet bloqué
+                equipSelect.options[1].disabled = false;
+                equipSelect.options[2].disabled = true;
                 if (equipSelect.selectedIndex === 2) equipSelect.selectedIndex = 1;
             } else {
                 equipSelect.options[1].disabled = false;
-                equipSelect.options[2].disabled = false; // Tout débloqué à 400+
+                equipSelect.options[2].disabled = false;
             }
 
-            // Logique Résolution
             if (budget < 500) {
-                resSelect.options[1].disabled = true; // 1440p bloqué
-                resSelect.options[2].disabled = true; // 4K bloqué
+                resSelect.options[1].disabled = true;
+                resSelect.options[2].disabled = true;
                 resSelect.selectedIndex = 0;
             } else if (budget === 500) {
-                resSelect.options[1].disabled = false; // 1440p débloqué
-                resSelect.options[2].disabled = true;  // 4K bloqué
+                resSelect.options[1].disabled = false;
+                resSelect.options[2].disabled = true;
                 if (resSelect.selectedIndex === 2) resSelect.selectedIndex = 1;
             } else {
                 resSelect.options[1].disabled = false;
-                resSelect.options[2].disabled = false; // 4K débloqué pour "Plus de 500€" (value 501)
+                resSelect.options[2].disabled = false;
             }
         }
 
-        function updateLink() {
+        function updateLinks() {
             checkCompatibility();
             
             const budget = budgetSelect.options[budgetSelect.selectedIndex].text;
@@ -217,25 +225,28 @@
             const couleur = document.getElementById('couleur').value;
             const lumiere = document.getElementById('lumiere').value;
             
-            // Récupérer les jeux cochés
             const checkboxes = document.querySelectorAll('input[name="jeux"]:checked');
             let jeuxChoisis = Array.from(checkboxes).map(cb => cb.value).join(', ');
-            if (jeuxChoisis === "") jeuxChoisis = "Aucun jeu coché";
+            if (jeuxChoisis === "") jeuxChoisis = "Aucun sélectionné";
 
             const precision = document.getElementById('precision').value;
             
-            const message = `Bonjour, je souhaite configurer un PC:%0A- Budget : ${budget}%0A- Usage : ${usage}%0A- Équipement : ${peripheriques}%0A- Résolution : ${resolution}%0A- Jeux : ${jeuxChoisis}%0A- Boîtier : ${couleur} - ${lumiere}%0A- Détails : ${precision}`;
-            
-            whatsappBtn.href = `https://wa.me/${phone}?text=${message}`;
+            // Format pour WhatsApp
+            const messageWA = `Bonjour, je souhaite configurer un PC:%0A- Budget : ${budget}%0A- Usage : ${usage}%0A- Équipement : ${peripheriques}%0A- Résolution : ${resolution}%0A- Jeux : ${jeuxChoisis}%0A- Boîtier : ${couleur} - ${lumiere}%0A- Détails : ${precision}`;
+            whatsappBtn.href = `https://wa.me/${phone}?text=${messageWA}`;
+
+            // Format pour Email
+            const subject = encodeURIComponent("Demande de devis PC sur-mesure - Opti-build PC");
+            const messageEmail = `Bonjour,%0D%0A%0D%0AJe souhaite configurer un PC. Voici mes critères :%0D%0A%0D%0A- Budget : ${budget}%0D%0A- Usage : ${usage}%0D%0A- Équipement : ${peripheriques}%0D%0A- Résolution : ${resolution}%0D%0A- Jeux : ${jeuxChoisis}%0D%0A- Boîtier : ${couleur} - ${lumiere}%0D%0A- Détails : ${precision}%0D%0A%0D%0AMerci de me recontacter avec une proposition.`;
+            emailBtn.href = `mailto:${emailAddress}?subject=${subject}&body=${messageEmail}`;
         }
 
-        form.addEventListener('input', updateLink);
-        // Écouter spécifiquement les cases à cocher pour actualiser le lien
+        form.addEventListener('input', updateLinks);
         document.querySelectorAll('input[name="jeux"]').forEach(cb => {
-            cb.addEventListener('change', updateLink);
+            cb.addEventListener('change', updateLinks);
         });
         
-        updateLink(); // Appel initial
+        updateLinks(); 
     </script>
 </body>
 </html>
