@@ -53,7 +53,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Budget (Environ)</label>
-                            <select id="budget" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <select id="budget" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
                                 <option value="300">300€</option>
                                 <option value="350">350€</option>
                                 <option value="400">400€</option>
@@ -64,7 +64,7 @@
                         </div>
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Usage principal</label>
-                            <select id="usage" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <select id="usage" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
                                 <option value="Gaming">Gaming</option>
                                 <option value="Travail / Télétravail / Bureautique">Travail / Télétravail / Bureautique</option>
                                 <option value="Montage photo / vidéo pro">Montage photo / vidéo pro</option>
@@ -80,7 +80,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Matériel inclus</label>
-                            <select id="peripheriques" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <select id="peripheriques" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
                                 <option value="Tour seule">Tour seule</option>
                                 <option value="Tour + Écran 22 pouces 1080p">Tour + Écran (22" 1080p)</option>
                                 <option value="Tour + Écran 22 pouces 1080p + Périphériques">Tour + Écran + Périphériques</option>
@@ -88,7 +88,7 @@
                         </div>
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Résolution visée</label>
-                            <select id="resolution" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <select id="resolution" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
                                 <option value="1080p (Standard)">1080p (Standard)</option>
                                 <option value="1440p (QHD)">1440p (QHD)</option>
                                 <option value="4K">4K</option>
@@ -99,27 +99,59 @@
 
                 <div class="space-y-4">
                     <h2 class="text-sm font-black uppercase italic text-blue-600 border-b border-blue-100 pb-2 flex items-center gap-2">
+                        <i class="fas fa-gamepad"></i> Tes Jeux (Optionnel)
+                    </h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 p-3 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                            <input type="checkbox" name="jeux" value="Fortnite" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                            <span class="text-xs font-bold text-slate-700">Fortnite</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 p-3 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                            <input type="checkbox" name="jeux" value="Warzone" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                            <span class="text-xs font-bold text-slate-700">Warzone / CoD</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 p-3 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                            <input type="checkbox" name="jeux" value="Valorant / CS2" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                            <span class="text-xs font-bold text-slate-700">Valorant / CS2</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 p-3 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                            <input type="checkbox" name="jeux" value="GTA V" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                            <span class="text-xs font-bold text-slate-700">GTA V (RP)</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 p-3 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                            <input type="checkbox" name="jeux" value="League of Legends" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                            <span class="text-xs font-bold text-slate-700">LoL</span>
+                        </label>
+                        <label class="flex items-center space-x-3 bg-slate-50 border border-slate-200 p-3 rounded-xl cursor-pointer hover:border-blue-500 transition">
+                            <input type="checkbox" name="jeux" value="Minecraft" class="w-4 h-4 text-blue-600 rounded border-slate-300">
+                            <span class="text-xs font-bold text-slate-700">Minecraft</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h2 class="text-sm font-black uppercase italic text-blue-600 border-b border-blue-100 pb-2 flex items-center gap-2">
                         <i class="fas fa-palette"></i> Boîtier & Détails
                     </h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Couleur du boîtier</label>
-                            <select id="couleur" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <select id="couleur" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
                                 <option value="Noir">Noir</option>
                                 <option value="Blanc">Blanc</option>
                             </select>
                         </div>
                         <div>
                             <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Ambiance lumineuse</label>
-                            <select id="lumiere" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all">
+                            <select id="lumiere" class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all cursor-pointer">
                                 <option value="Sobre (sans lumière)">Sobre (sans lumière)</option>
                                 <option value="Gaming (avec lumière)">Gaming (avec lumière)</option>
                             </select>
                         </div>
                     </div>
                     <div>
-                        <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Jeux préférés / Précisions</label>
-                        <textarea id="precision" rows="2" placeholder="Ex: Je joue à Fortnite et Valorant, j'aimerais qu'il soit très silencieux..." class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
+                        <label class="block text-[10px] font-black uppercase text-slate-400 mb-2">Autres jeux, envies ou remarques</label>
+                        <textarea id="precision" rows="2" placeholder="Ex: Il me faut le Wi-Fi, je veux un boîtier vitré..." class="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 font-bold text-sm outline-none focus:ring-2 focus:ring-blue-500 transition-all"></textarea>
                     </div>
                 </div>
 
@@ -146,34 +178,32 @@
         function checkCompatibility() {
             const budget = parseInt(budgetSelect.value);
             
-            // Logique de verrouillage Équipement
+            // Logique Équipement
             if (budget === 300) {
-                // 300€ : Tour seule uniquement
-                equipSelect.options[1].disabled = true; // Tour + Ecran
-                equipSelect.options[2].disabled = true; // Pack complet
+                equipSelect.options[1].disabled = true; // Tour + Ecran bloqué
+                equipSelect.options[2].disabled = true; // Pack complet bloqué
                 if (equipSelect.selectedIndex > 0) equipSelect.selectedIndex = 0;
             } else if (budget === 350) {
-                // 350€ : Tour + Ecran ok, mais pas le pack complet
-                equipSelect.options[1].disabled = false;
-                equipSelect.options[2].disabled = true;
+                equipSelect.options[1].disabled = false; // Tour + Ecran débloqué
+                equipSelect.options[2].disabled = true;  // Pack complet bloqué
                 if (equipSelect.selectedIndex === 2) equipSelect.selectedIndex = 1;
             } else {
-                // 400€ et plus : Tout est débloqué pour l'équipement
                 equipSelect.options[1].disabled = false;
-                equipSelect.options[2].disabled = false;
+                equipSelect.options[2].disabled = false; // Tout débloqué à 400+
             }
 
-            // Logique de verrouillage Résolution
+            // Logique Résolution
             if (budget < 500) {
-                resSelect.options[1].disabled = true; // 1440p
-                resSelect.options[2].disabled = true; // 4K
+                resSelect.options[1].disabled = true; // 1440p bloqué
+                resSelect.options[2].disabled = true; // 4K bloqué
                 resSelect.selectedIndex = 0;
             } else if (budget === 500) {
-                resSelect.options[1].disabled = false;
-                resSelect.options[2].disabled = true;
+                resSelect.options[1].disabled = false; // 1440p débloqué
+                resSelect.options[2].disabled = true;  // 4K bloqué
+                if (resSelect.selectedIndex === 2) resSelect.selectedIndex = 1;
             } else {
                 resSelect.options[1].disabled = false;
-                resSelect.options[2].disabled = false;
+                resSelect.options[2].disabled = false; // 4K débloqué pour "Plus de 500€" (value 501)
             }
         }
 
@@ -186,14 +216,26 @@
             const resolution = resSelect.value;
             const couleur = document.getElementById('couleur').value;
             const lumiere = document.getElementById('lumiere').value;
+            
+            // Récupérer les jeux cochés
+            const checkboxes = document.querySelectorAll('input[name="jeux"]:checked');
+            let jeuxChoisis = Array.from(checkboxes).map(cb => cb.value).join(', ');
+            if (jeuxChoisis === "") jeuxChoisis = "Aucun jeu coché";
+
             const precision = document.getElementById('precision').value;
             
-            const message = `Bonjour, je souhaite configurer un PC:%0A- Budget : ${budget}%0A- Usage : ${usage}%0A- Équipement : ${peripheriques}%0A- Résolution : ${resolution}%0A- Boîtier : ${couleur} - ${lumiere}%0A- Détails : ${precision}`;
+            const message = `Bonjour, je souhaite configurer un PC:%0A- Budget : ${budget}%0A- Usage : ${usage}%0A- Équipement : ${peripheriques}%0A- Résolution : ${resolution}%0A- Jeux : ${jeuxChoisis}%0A- Boîtier : ${couleur} - ${lumiere}%0A- Détails : ${precision}`;
+            
             whatsappBtn.href = `https://wa.me/${phone}?text=${message}`;
         }
 
         form.addEventListener('input', updateLink);
-        updateLink();
+        // Écouter spécifiquement les cases à cocher pour actualiser le lien
+        document.querySelectorAll('input[name="jeux"]').forEach(cb => {
+            cb.addEventListener('change', updateLink);
+        });
+        
+        updateLink(); // Appel initial
     </script>
 </body>
 </html>
