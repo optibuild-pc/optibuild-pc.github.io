@@ -25,55 +25,75 @@
         </div>
     </nav>
 
-    <!-- HEADER BOUTIQUE -->
+    <!-- HEADER -->
     <header class="bg-slate-900 py-16 px-4 text-center text-white">
         <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-4">Stock <span class="text-blue-500">Disponible</span></h2>
-        <p class="text-slate-400 text-xs uppercase tracking-[0.3em] font-bold">Prêt à l'emploi à Valenciennes</p>
+        <p class="text-slate-400 text-xs uppercase tracking-[0.3em] font-bold">PC montés et testés à Valenciennes</p>
     </header>
 
     <!-- GRILLE DES PRODUITS -->
     <main class="max-w-7xl mx-auto py-12 px-4 flex-grow">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            <!-- NOUVELLE CONFIGURATION : PC PERFORMANCE ULTRA -->
-            <div class="bg-white rounded-[2rem] shadow-2xl flex flex-col border-2 border-blue-500 hover:-translate-y-2 transition-transform duration-300 relative">
+            <!-- 1. NOUVEAUTÉ : PC PERFORMANCE ULTRA -->
+            <div class="bg-white rounded-[2rem] shadow-2xl flex flex-col border-2 border-blue-600 hover:-translate-y-2 transition-transform duration-300 relative">
                 <div class="absolute -top-4 right-1/2 translate-x-1/2 bg-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase italic shadow-lg whitespace-nowrap z-30">Nouveauté</div>
                 <div class="relative h-48 overflow-hidden rounded-t-[2rem]">
-                    <img src="https://i.ibb.co/XZg8Hdwd/Gemini-Generated-Image-cxyadccxyadccxya-1.png" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500" alt="PC Gamer i5-9400 GTX 1660 Super" onclick="openModal(this.src)">
+                    <img src="https://i.ibb.co/XZg8Hdwd/Gemini-Generated-Image-cxyadccxyadccxya-1.png" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500" alt="PC Performance Ultra" onclick="openModal(this.src)">
                 </div>
-                <div class="p-6 flex flex-col flex-grow bg-blue-50/50">
-                    <h3 class="text-xl font-black uppercase italic mb-2">PC Performance Ultra</h3>
+                <div class="p-6 flex flex-col flex-grow bg-blue-50/30">
+                    <h3 class="text-xl font-black uppercase italic mb-2 text-blue-800">PC Performance Ultra</h3>
                     <p class="text-blue-600 font-black text-2xl italic mb-4">400€</p>
                     <div class="space-y-3 mb-6 text-[11px] font-medium text-slate-700">
                         <div class="flex items-center gap-2"><i class="fas fa-microchip text-blue-500 w-4"></i><span>Intel Core i5-9400 (6 cœurs)</span></div>
-                        <div class="flex items-center gap-2"><i class="fas fa-memory text-blue-500 w-4"></i><span>16Go RAM DDR4 / GTX 1660 Super Zotac</span></div>
-                        <div class="flex items-center gap-2"><i class="fas fa-wifi text-blue-500 w-4"></i><span>Wi-Fi & Bluetooth Inclus</span></div>
-                        <div class="flex items-center gap-2"><i class="fas fa-hdd text-blue-500 w-4"></i><span>SSD 240Go + HDD 1To (Win 11 Pro)</span></div>
-                        <div class="flex items-center gap-2"><i class="fas fa-bolt text-blue-500 w-4"></i><span>Alim 550W 80+ Bronze / Boîtier RGB</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-memory text-blue-500 w-4"></i><span>16Go RAM / GTX 1660 Super Zotac[cite: 1]</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-wifi text-blue-500 w-4"></i><span>Wi-Fi & Bluetooth Inclus[cite: 1]</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-hdd text-blue-500 w-4"></i><span>SSD 240Go + HDD 1To (Win 11)[cite: 1]</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-bolt text-blue-500 w-4"></i><span>Alim 550W 80+ / Boîtier RGB[cite: 1]</span></div>
                     </div>
-                    <a href="https://wa.me/33751121610?text=Bonjour, je souhaite réserver le PC Performance Ultra à 400€" class="mt-auto bg-[#25D366] text-white text-center py-3 rounded-xl font-black uppercase italic text-[10px] tracking-widest shadow-lg hover:bg-[#1eb954] transition">Réserver via WhatsApp</a>
+                    <a href="https://wa.me/33751121610?text=Bonjour, je souhaite réserver le PC Performance Ultra à 400€" class="mt-auto bg-[#25D366] text-white text-center py-3 rounded-xl font-black uppercase italic text-[10px] tracking-widest shadow-lg hover:bg-[#1eb954] transition">Réserver</a>
                 </div>
             </div>
 
-            <!-- ANCIEN PC PERFORMANCE (Optionnel, tu peux le laisser ou l'enlever) -->
-            <div class="bg-white rounded-[2rem] shadow-xl flex flex-col border border-slate-100 opacity-80">
+            <!-- 2. PC PERFORMANCE CLASSIQUE -->
+            <div class="bg-white rounded-[2rem] shadow-xl flex flex-col border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
                 <div class="relative h-48 overflow-hidden rounded-t-[2rem]">
-                    <img src="https://i.ibb.co/xqhg6dvk/6221468feaa94aa167024400b9ab1e7db2bce016-1.jpg" class="w-full h-full object-cover grayscale" alt="PC Gamer Performance">
-                    <div class="absolute inset-0 bg-slate-900/60 flex items-center justify-center">
-                        <span class="text-white font-black uppercase italic text-xl border-4 border-white px-4 py-2">Vendu</span>
-                    </div>
+                    <img src="https://i.ibb.co/xqhg6dvk/6221468feaa94aa167024400b9ab1e7db2bce016-1.jpg" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500" alt="PC Performance" onclick="openModal(this.src)">
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
-                    <h3 class="text-xl font-black uppercase italic mb-2 text-slate-400">PC Performance</h3>
-                    <p class="text-slate-400 font-black text-2xl italic mb-4">350€</p>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase">Victime de son succès à Valenciennes</p>
+                    <h3 class="text-xl font-black uppercase italic mb-2">PC Performance</h3>
+                    <p class="text-blue-600 font-black text-2xl italic mb-4">350€</p>
+                    <div class="space-y-3 mb-6 text-[11px] font-medium text-slate-700">
+                        <div class="flex items-center gap-2"><i class="fas fa-microchip text-blue-500 w-4"></i><span>Intel Core i5 (Série 6/7)</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-memory text-blue-500 w-4"></i><span>16Go RAM / GTX 1060</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-hdd text-blue-500 w-4"></i><span>SSD 240Go + HDD 500Go</span></div>
+                    </div>
+                    <a href="https://wa.me/33751121610?text=Bonjour, je souhaite réserver le PC Performance à 350€" class="mt-auto bg-[#25D366] text-white text-center py-3 rounded-xl font-black uppercase italic text-[10px] tracking-widest shadow-lg hover:bg-[#1eb954] transition">Réserver</a>
+                </div>
+            </div>
+
+            <!-- 3. PC BUREAUTIQUE / MULTIMÉDIA -->
+            <div class="bg-white rounded-[2rem] shadow-xl flex flex-col border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+                <div class="relative h-48 overflow-hidden rounded-t-[2rem]">
+                    <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-500" alt="PC Bureautique" onclick="openModal(this.src)">
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-black uppercase italic mb-2">PC Bureautique Pro</h3>
+                    <p class="text-blue-600 font-black text-2xl italic mb-4">250€</p>
+                    <div class="space-y-3 mb-6 text-[11px] font-medium text-slate-700">
+                        <div class="flex items-center gap-2"><i class="fas fa-microchip text-blue-500 w-4"></i><span>Processeur i3 / i5 Rapide</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-memory text-blue-500 w-4"></i><span>8Go RAM DDR4</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-hdd text-blue-500 w-4"></i><span>SSD 480Go Haute Vitesse</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-window-maximize text-blue-500 w-4"></i><span>Windows 11 & Office</span></div>
+                    </div>
+                    <a href="https://wa.me/33751121610?text=Bonjour, je souhaite réserver le PC Bureautique à 250€" class="mt-auto bg-[#25D366] text-white text-center py-3 rounded-xl font-black uppercase italic text-[10px] tracking-widest shadow-lg hover:bg-[#1eb954] transition">Réserver</a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <!-- MODAL POUR LES IMAGES -->
+    <!-- MODAL IMAGES -->
     <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 flex items-center justify-center p-4" onclick="closeModal()">
         <img id="modalImg" class="max-w-full max-h-full rounded-xl shadow-2xl">
     </div>
