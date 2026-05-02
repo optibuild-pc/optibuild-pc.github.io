@@ -9,7 +9,6 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <style>
         .services-hero {
-            /* Nouvelle image : Gros plan sur une carte mère high-tech */
             background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), 
                               url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
@@ -34,14 +33,14 @@
         </div>
     </nav>
 
-    <!-- Header avec la nouvelle image de carte mère -->
+    <!-- Header -->
     <header class="services-hero py-32 px-4 text-center text-white">
         <div class="max-w-4xl mx-auto relative z-10">
             <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
                 L'Atelier <br><span class="text-blue-500">Expertise</span>
             </h2>
             <p class="text-slate-200 font-bold uppercase tracking-widest text-xs mt-6 bg-slate-900/40 inline-block px-4 py-2 rounded-full backdrop-blur-sm">
-                Maintenance & Optimisation à Valenciennes
+                Maintenance, Réparation & Optimisation
             </p>
         </div>
     </header>
@@ -50,34 +49,43 @@
     <main class="py-16 px-4 max-w-7xl mx-auto -mt-16 relative z-20 flex-grow">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Nettoyage -->
+            <!-- Service 1: Nettoyage -->
             <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
                 <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mb-6 text-3xl">
                     <i class="fas fa-tools"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Nettoyage Complet</h3>
-                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Dépoussiérage et changement de pâte thermique pour booster la durée de vie de votre PC.</p>
-                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour un nettoyage." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Prendre RDV</a>
+                <h3 class="text-xl font-black uppercase italic mb-2 tracking-tight text-slate-900">Nettoyage Complet</h3>
+                <p class="text-blue-600 font-bold text-[10px] uppercase tracking-widest mb-4 italic">Baisse de température & Silence</p>
+                <p class="text-slate-500 text-sm italic mb-8 flex-grow">
+                    Votre PC chauffe ou fait du bruit ? Nous effectuons un démontage complet, un dépoussiérage à l'air sec et le remplacement de la pâte thermique par de la **Thermal Grizzly** pour gagner en longévité et en silence.
+                </p>
+                <a href="https://wa.me/33751121610?text=Bonjour, j'ai une question concernant le nettoyage de mon PC." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Infos & Rendez-vous</a>
             </div>
 
-            <!-- Windows -->
+            <!-- Service 2: Windows -->
             <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
                 <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mb-6 text-3xl">
                     <i class="fas fa-microchip"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Installation & MAJ</h3>
-                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Installation propre de Windows 10/11 et drivers pour une stabilité parfaite.</p>
-                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour une installation Windows." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Prendre RDV</a>
+                <h3 class="text-xl font-black uppercase italic mb-2 tracking-tight text-slate-900">Installation & MAJ</h3>
+                <p class="text-blue-600 font-bold text-[10px] uppercase tracking-widest mb-4 italic">Rapidité & Sécurité</p>
+                <p class="text-slate-500 text-sm italic mb-8 flex-grow">
+                    Un système lent ou infecté ? Nous réinstallons un Windows **propre, sans logiciels inutiles**, avec tous vos pilotes à jour. Nous configurons également la sécurité pour un démarrage en moins de 10 secondes.
+                </p>
+                <a href="https://wa.me/33751121610?text=Bonjour, j'aimerais en savoir plus sur l'installation de Windows." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Infos & Rendez-vous</a>
             </div>
 
-            <!-- Upgrade -->
+            <!-- Service 3: Upgrade -->
             <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 lg:col-span-1 md:col-span-2 lg:mx-0 md:mx-auto md:max-w-md lg:max-w-none">
                 <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mb-6 text-3xl">
                     <i class="fas fa-rocket"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Upgrade Hardware</h3>
-                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Boostez vos FPS en changeant de carte graphique ou de processeur.</p>
-                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour améliorer mon PC." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Prendre RDV</a>
+                <h3 class="text-xl font-black uppercase italic mb-2 tracking-tight text-slate-900">Upgrade Hardware</h3>
+                <p class="text-blue-600 font-bold text-[10px] uppercase tracking-widest mb-4 italic">Boost de FPS & Multitâche</p>
+                <p class="text-slate-500 text-sm italic mb-8 flex-grow">
+                    Besoin de plus de puissance pour vos jeux ? Nous installons vos nouveaux composants (Carte graphique, RAM, SSD) après avoir vérifié la **compatibilité** avec votre matériel actuel. Donnez une seconde vie à votre PC !
+                </p>
+                <a href="https://wa.me/33751121610?text=Bonjour, j'ai une question pour améliorer les composants de mon PC." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Infos & Rendez-vous</a>
             </div>
 
         </div>
