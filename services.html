@@ -9,9 +9,9 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     <style>
         .services-hero {
-            /* On baisse l'opacité du noir (0.6 au lieu de 0.9) pour voir l'image */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), 
-                              url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2000&auto=format&fit=crop');
+            /* Nouvelle image : Gros plan sur une carte mère high-tech */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), 
+                              url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -34,14 +34,14 @@
         </div>
     </nav>
 
-    <!-- Header avec Image visible -->
-    <header class="services-hero py-32 px-4 text-center text-white relative">
+    <!-- Header avec la nouvelle image de carte mère -->
+    <header class="services-hero py-32 px-4 text-center text-white">
         <div class="max-w-4xl mx-auto relative z-10">
-            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4 shadow-xl">
-                L'Atelier <br><span class="text-blue-500">Maintenance</span>
+            <h2 class="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
+                L'Atelier <br><span class="text-blue-500">Expertise</span>
             </h2>
             <p class="text-slate-200 font-bold uppercase tracking-widest text-xs mt-6 bg-slate-900/40 inline-block px-4 py-2 rounded-full backdrop-blur-sm">
-                Expertise locale à Valenciennes & environs
+                Maintenance & Optimisation à Valenciennes
             </p>
         </div>
     </header>
@@ -53,54 +53,35 @@
             <!-- Nettoyage -->
             <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
                 <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mb-6 text-3xl">
-                    <i class="fas fa-wind"></i>
+                    <i class="fas fa-tools"></i>
                 </div>
                 <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Nettoyage Complet</h3>
-                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Dépoussiérage intégral, changement de la pâte thermique et optimisation du flux d'air pour un PC frais et silencieux.</p>
-                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour un nettoyage complet." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Consulter le prix</a>
+                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Dépoussiérage et changement de pâte thermique pour booster la durée de vie de votre PC.</p>
+                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour un nettoyage." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Prendre RDV</a>
             </div>
 
             <!-- Windows -->
             <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300">
                 <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mb-6 text-3xl">
-                    <i class="fab fa-windows"></i>
+                    <i class="fas fa-microchip"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Installation OS</h3>
-                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Formatage, installation de Windows 10/11 Pro, mise à jour des pilotes et optimisation pour une rapidité maximale.</p>
-                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour une réinstallation Windows." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Consulter le prix</a>
+                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Installation & MAJ</h3>
+                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Installation propre de Windows 10/11 et drivers pour une stabilité parfaite.</p>
+                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour une installation Windows." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Prendre RDV</a>
             </div>
 
             <!-- Upgrade -->
             <div class="bg-white p-8 rounded-[2.5rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 lg:col-span-1 md:col-span-2 lg:mx-0 md:mx-auto md:max-w-md lg:max-w-none">
                 <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mb-6 text-3xl">
-                    <i class="fas fa-microchip"></i>
+                    <i class="fas fa-rocket"></i>
                 </div>
-                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Upgrade Composants</h3>
-                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Installation de nouveaux composants (RAM, GPU, SSD) pour booster les performances de votre machine actuelle.</p>
-                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour booster mon PC." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Consulter le prix</a>
+                <h3 class="text-xl font-black uppercase italic mb-4 tracking-tight text-slate-900">Upgrade Hardware</h3>
+                <p class="text-slate-500 text-sm italic mb-8 flex-grow">Boostez vos FPS en changeant de carte graphique ou de processeur.</p>
+                <a href="https://wa.me/33751121610?text=Bonjour, je souhaite un devis pour améliorer mon PC." class="w-full bg-[#25D366] text-white py-4 rounded-2xl font-black uppercase italic text-[10px] tracking-widest shadow-md hover:bg-[#1eb954] transition">Prendre RDV</a>
             </div>
 
         </div>
     </main>
-
-    <!-- Section Diagnostic / Problème -->
-    <section class="max-w-7xl mx-auto px-4 py-8 mb-16">
-        <div class="bg-slate-900 rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden shadow-2xl border border-white/10">
-            <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 text-center lg:text-left">
-                <div>
-                    <h3 class="text-4xl font-black uppercase italic tracking-tighter mb-4">Un autre problème technique ?</h3>
-                    <p class="text-slate-400 text-lg font-medium italic max-w-2xl">Écran bleu, PC qui ne s'allume plus ou lenteurs inexpliquées... Réalisons ensemble un diagnostic complet de votre matériel.</p>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-                    <a href="https://wa.me/33751121610" target="_blank" class="bg-[#25D366] text-white px-10 py-5 rounded-full font-black uppercase italic text-[11px] tracking-widest shadow-xl hover:scale-105 transition-all text-center">
-                        <i class="fab fa-whatsapp mr-2 text-lg"></i> Diagnostic WhatsApp
-                    </a>
-                </div>
-            </div>
-            <!-- Décoration en arrière-plan -->
-            <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl"></div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-white py-12 text-center border-t border-white/5 font-bold uppercase tracking-[0.4em] text-[9px] text-slate-500 mt-auto">
